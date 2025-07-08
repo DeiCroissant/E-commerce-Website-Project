@@ -235,7 +235,10 @@
     transition: var(--trans-color);
   }
 
-
+  .mini-text {
+    font-size: var(--font-smaller);
+    color: var(--light-text-color);
+  }
 
 
   /* --------------------
@@ -460,13 +463,95 @@ nav .fly-item {
 /* c. Header Main, Departments Category
 --------------------------------------------*/
 
+.header-main {
+  background-color: var(--secondary-dark-color);
+  padding: 1.5em 0;
+  margin-bottom: 2em;
+}
+
+.dpt-cat {
+  position: relative;
+  z-index: 10;
+}
+
+
+.dpt-cat .dpt-head {
+  position: relative;
+  width: 300px;
+  padding: 0.75em 1.5em;
+  background-color: var(--primary-color);
+  border-radius: 7px 7px 0 0;
+  color: var(--white-color);
+  margin-bottom: -2.15em;
+}
+
+.dpt-cat .dpt-head .mini-text {
+  color: var(--light-bg-color);
+}
+.dpt-cat .dpt-trigger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1.3em;
+  height: 60px;
+  width: 60px;
+}
 
 /* 01. HEADER
 --------------------------------------------*/
 /* d. Search Form
 --------------------------------------------*/
 
+.header-main .right {
+  flex: 1;
+}
 
+form {
+  position: relative;
+}
+
+form.search input {
+  line-height: 3.25em;
+  padding: 0 7em 0 4.5em;
+  border: 0;
+  outline: 0;
+  width: var(--percent100);
+  border-radius: 7px;
+  font-size: 0.9em;
+  font-weight: var(--fw3);
+
+}
+
+form.search :where(span,button) {
+  position: absolute;
+  top: 0;
+  padding: 0.55em 1.5em;
+  font-size: 1em;
+  color: var(--light-text-color);
+  height: var(--percent100);
+}
+
+form.search button {
+  right: 0;
+  border: 0;
+  outline: 0;
+  font-size: 0.875em;
+  font-weight: var(--fw6);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 0 7px 7px 0;
+  cursor: pointer;
+  transition: var(--trans-background);
+
+}
+
+form.search button:hover {
+  background-color: var(--dark-color);
+}
+
+form.search button:hover {
+  background-color: var(--dark-color);
+}
 /* 01. HEADER
 --------------------------------------------*/
 /* e. Responsive MENU - Off Canvas
@@ -731,7 +816,7 @@ nav .fly-item {
   nav .mega .women-brands {
     display: flex;
     flex-wrap: wrap;
-    min-width: 180px;
+    max-width: 180px;
   }
 
   nav .mega .women-brands li {
@@ -768,13 +853,18 @@ nav .fly-item {
     width: var(--percent100);
   }
 
-  nav .mega .products .text-content h4 {
+    nav .mega .products .text-content h4 {
     font-size: 2em;
     font-weight: var(--fw8);
     text-align: center;
     color: var(--secondary-dark-color);
-
   }
+
+  .header-main .right {
+    max-width: 600px;
+    margin-left: auto;
+  }
+
 
 }
 
